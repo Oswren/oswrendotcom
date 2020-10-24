@@ -2,7 +2,9 @@
 
   <mat-grid-tile class="http-bird">
     <mat-grid-tile-header>
-      <button mat-raised-button>Copy Url</button>
+      <button mat-raised-button (click)="copyLinkToBirb('100Continue')" class="link-button">
+        Copy Embed Link
+      </button>
     </mat-grid-tile-header>
     <img src="/http-birds/100Continue.png" alt="100Continue bird">
     <mat-grid-tile-footer>
@@ -12,19 +14,23 @@
 
   <mat-grid-tile class="http-bird">
     <mat-grid-tile-header>
-      <button mat-raised-button>Copy Url</button>
+      <button mat-raised-button (click)="copyLinkToBirb('200OK')" class="link-button">
+        Copy Embed Link
+      </button>
     </mat-grid-tile-header>
-    <img src="/http-birds/200OK.png" alt="200ok bird">
-    <mat-grid-tile-footer class="http-bird-footer">
+    <img src="/http-birds/200OK.png" alt="200ok bird" >
+    <mat-grid-tile-footer>
       200 OK
     </mat-grid-tile-footer>
   </mat-grid-tile>
 
   <mat-grid-tile class="http-bird">
     <mat-grid-tile-header>
-      <button mat-raised-button>Copy Url</button>
+      <button mat-raised-button (click)="copyLinkToBirb('201Created')" class="link-button">
+        Copy Embed Link
+      </button>
     </mat-grid-tile-header>
-    <img src="/http-birds/201Created.png" alt="200Created bird">
+    <img src="/http-birds/201Created.png" alt="201Created bird">
     <mat-grid-tile-footer>
       201 Created
     </mat-grid-tile-footer>
@@ -32,11 +38,85 @@
 
   <mat-grid-tile class="http-bird">
     <mat-grid-tile-header>
-      <button mat-raised-button>Copy Url</button>
+      <button mat-raised-button (click)="copyLinkToBirb('202Accepted')" class="link-button">
+        Copy Embed Link
+      </button>
+    </mat-grid-tile-header>
+    <img src="/http-birds/202Accepted.png" alt="202Accepted bird">
+    <mat-grid-tile-footer>
+      202 Accepted
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+
+  <mat-grid-tile class="http-bird">
+    <mat-grid-tile-header>
+      <button mat-raised-button (click)="copyLinkToBirb('301MovedPermanently')" class="link-button">
+        Copy Embed Link
+      </button>
+    </mat-grid-tile-header>
+    <img src="/http-birds/301MovedPermanently.png" alt="301MovedPermanently bird">
+    <mat-grid-tile-footer>
+      301 Moved Permanently
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+
+  <mat-grid-tile class="http-bird">
+    <mat-grid-tile-header>
+      <button mat-raised-button (click)="copyLinkToBirb('403Forbidden')" class="link-button">
+        Copy Embed Link
+      </button>
+    </mat-grid-tile-header>
+    <img src="/http-birds/403Forbidden.png" alt="403Forbidden bird">
+    <mat-grid-tile-footer class="test">
+      403 Forbidden
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+
+  <mat-grid-tile class="http-bird">
+    <mat-grid-tile-header>
+      <button mat-raised-button (click)="copyLinkToBirb('404NotFound')" class="link-button">
+        Copy Embed Link
+      </button>
+    </mat-grid-tile-header>
+    <img src="/http-birds/404NotFound.png" alt="404NotFound bird">
+    <mat-grid-tile-footer>
+      404 Not Found
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+
+  <mat-grid-tile class="http-bird">
+    <mat-grid-tile-header>
+      <button mat-raised-button (click)="copyLinkToBirb('405MethodNotAllowed')" class="link-button">
+        Copy Embed Link
+      </button>
+    </mat-grid-tile-header>
+    <img src="/http-birds/405MethodNotAllowed.png" alt="405MethodNotAllowed bird">
+    <mat-grid-tile-footer>
+      405 Method Not Allowed
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+
+  <mat-grid-tile class="http-bird">
+    <mat-grid-tile-header>
+      <button mat-raised-button (click)="copyLinkToBirb('406NotAcceptable')" class="link-button">
+        Copy Embed Link
+      </button>
     </mat-grid-tile-header>
     <img src="/http-birds/406NotAcceptable.png" alt="406NotAcceptable bird">
     <mat-grid-tile-footer>
-      406 NotAcceptable
+      406 Not Acceptable
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+
+  <mat-grid-tile class="http-bird">
+    <mat-grid-tile-header>
+      <button mat-raised-button (click)="copyLinkToBirb('503ServiceUnavailable')" class="link-button">
+        Copy Embed Link
+      </button>
+    </mat-grid-tile-header>
+    <img src="/http-birds/503ServiceUnavailable.png" alt="503ServiceUnavailable bird">
+    <mat-grid-tile-footer>
+      503 Service Unavailable
     </mat-grid-tile-footer>
   </mat-grid-tile>
 

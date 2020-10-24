@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Oswren';
+
+  // TODO - extract link copy from http-bird component into shared service
+  copyLink(): void {
+  }
+
 }
