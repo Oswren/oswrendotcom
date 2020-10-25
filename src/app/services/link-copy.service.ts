@@ -13,7 +13,7 @@ export class LinkCopyService {
       let textToCopy = window.location.href;
 
       if (birbToCopy) {
-        textToCopy = textToCopy + '/' + birbToCopy + '.png';
+        textToCopy = 'https://www.oswren.com/assets/images/http-birds/' + birbToCopy + '.png';
       }
 
       document.body.appendChild(dummyElement);
