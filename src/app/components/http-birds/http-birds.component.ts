@@ -13,7 +13,7 @@ export class HttpBirdsComponent implements OnInit {
   constructor(private copyCompleteSnackBar: MatSnackBar, private linkCopyService: LinkCopyService) { }
 
   @Input() birds: { id: number, path: string, desc: string }[] = [
-    { id: 100, path: '/http-birds/100.png', desc: '100Continue bird' },
+    { id: 100, path: '/http-birds/100.png', desc: '100 Continue' },
     { id: 200, path: '/http-birds/200.png', desc: '200 OK' },
     { id: 201, path: '/http-birds/201.png', desc: '201 Created' },
     { id: 202, path: '/http-birds/201.png', desc: '202 Accepted' },
