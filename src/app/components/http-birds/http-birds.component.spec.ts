@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HttpBirdsComponent } from './http-birds.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 describe('HttpBirdsComponent', () => {
   let component: HttpBirdsComponent;
@@ -8,7 +9,8 @@ describe('HttpBirdsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HttpBirdsComponent ]
+      declarations: [ HttpBirdsComponent ],
+      imports: [MatSnackBarModule]
     })
     .compileComponents();
   });

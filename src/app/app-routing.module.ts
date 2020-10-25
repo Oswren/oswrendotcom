@@ -4,6 +4,11 @@ import { HttpBirdsComponent } from './components/http-birds/http-birds.component
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/http-birds',
+    pathMatch: 'full'
+  },
+  {
     path: 'http-birds',
     component: HttpBirdsComponent
   }

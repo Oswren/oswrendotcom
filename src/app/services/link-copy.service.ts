@@ -28,5 +28,4 @@ export class LinkCopyService {
       return false;
     }
   }
-
 }

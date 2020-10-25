@@ -24,5 +24,4 @@ export class AppComponent {
       duration: 1000
     });
   }
-
 }
