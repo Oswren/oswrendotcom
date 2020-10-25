@@ -96,6 +96,12 @@
               "src/styles.scss"
             ],
             "scripts": []
+          },
+          "configurations": {
+            "headless": {
+              "browsers": "ChromeHeadless",
+              "watch": false
+            }
           }
         },
         "lint": {
