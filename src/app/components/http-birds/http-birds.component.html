@@ -1,13 +1,13 @@
 <mat-grid-list cols="3" rowHeight="1:1" gutterSize="15px" class="http-birds">
   <mat-grid-tile class="http-bird" *ngFor="let bird of birds">
     <mat-grid-tile-header>
-      <button mat-raised-button (click)="copyLinkToBirb(bird.id)" class="link-button">
-        Copy Embed Link
+      <button mat-flat-button (click)="copyLinkToBirb(bird.id)" class="link-button" color="accent">
+        <span>Copy Embed Link</span>
       </button>
     </mat-grid-tile-header>
     <img src="{{bird.path}}" alt="{{bird.desc}}}">
     <mat-grid-tile-footer>
-      {{bird.desc}}
+      <span>{{bird.desc}}</span>
     </mat-grid-tile-footer>
   </mat-grid-tile>
 </mat-grid-list>
