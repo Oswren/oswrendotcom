@@ -27,4 +27,4 @@ jobs:
     - run: npm ci
     - run: npm i
     - run: npm run build --if-present
-    - run: npm test-- --configuration=headless
+    - run: npm run test --configuration=headless
