@@ -13,11 +13,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HomeComponent } from './components/home/home.component';
+import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HttpBirdsComponent
+    HttpBirdsComponent,
+    HomeComponent,
+    FourOhFourComponent
   ],
   imports: [
     BrowserModule,
