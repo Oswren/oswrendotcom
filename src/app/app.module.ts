@@ -13,11 +13,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MtgSetsComponent } from './components/mtg-sets/mtg-sets.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HttpBirdsComponent
+    HttpBirdsComponent,
+    MtgSetsComponent
   ],
   imports: [
     BrowserModule,
