@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OswrenApiService } from 'src/app/services/oswren-api.service';
 
 @Component({
   selector: 'app-mtg-sets',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MtgSetsComponent implements OnInit {
 
-  constructor() { }
+  public setData: any;
+
+  constructor(private oswrenApiService: OswrenApiService) { }
 
   ngOnInit(): void {
   }
 
+  getAllCardsForSet(setCode: string) {
+    this.setData = this.oswrenApiService.getCardSet(setCode);
+  }
 }
