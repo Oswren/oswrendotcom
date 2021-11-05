@@ -2,7 +2,7 @@
 @include mat-core();
 
 $oswren-theme-primary: mat-palette($mat-blue-grey, A700);
-$oswren-theme-accent: mat-palette($mat-light-blue, 200);
+$oswren-theme-accent: mat-palette($mat-blue-grey, 500);
 $oswren-theme-warn: mat-palette($mat-deep-orange, 900);
 
 $oswren-theme: mat-dark-theme($oswren-theme-primary, $oswren-theme-accent, $oswren-theme-warn);

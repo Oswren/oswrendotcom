@@ -21,6 +21,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { MatDividerModule } from '@angular/material/divider';
     MatSnackBarModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDividerModule
+    MatDividerModule,
+    MatListModule
   ],
   providers: [LinkCopyService],
   bootstrap: [AppComponent]

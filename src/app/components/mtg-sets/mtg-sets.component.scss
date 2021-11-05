@@ -1,16 +1,36 @@
 .mtg-sets-search-card {    
     background-color: #455A64;
-    margin: 3%;
+    margin: 20px;
+    width: fit-content;
 }
 
 .mtg-cards-card {    
     background-color: #455A64;
-    margin: 3%;
+    margin: 20px;
     margin-top: 0;
 }
 
 .container {
     display: flex;
+}
+
+.tabber {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.paging-text {
+    text-align: center;
+}
+
+.set-list {
+    height: 223px;
+    overflow-y: scroll;
+}
+
+::ng-deep .search-button {
+    margin-left: 10px;
+    margin-bottom: 20px!important;
 }
 
 ::ng-deep .images {
@@ -33,5 +53,4 @@
 
 ::ng-deep .cards-found-area {
     background-color: #455A64;
-    width: 20%R
 }

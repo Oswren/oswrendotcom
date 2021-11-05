@@ -9,11 +9,15 @@ import { Observable, Subject } from 'rxjs';
 })
 export class OswrenApiService {
   private destroy$: Subject<boolean> = new Subject<boolean>();
-  private REST_API_URL = "https://localhost:44328/MTG/Cards/";
+  private REST_API_URL = 'https://api.oswren.com/MTG/';
   
   constructor(private httpClient: HttpClient) { }
 
-  public getCardSet(setCode: string): Observable<any> {
-    return this.httpClient.get(this.REST_API_URL + setCode).pipe(takeUntil(this.destroy$));
+  public getCardsForSet(setCode: string): Observable<any> {
+    return this.httpClient.get(this.REST_API_URL + 'cards/' + setCode).pipe(takeUntil(this.destroy$));
+  }
+
+  public getAllSets(): Observable<any> {
+    return this.httpClient.get(this.REST_API_URL + 'sets/').pipe(takeUntil(this.destroy$));
   }
 }

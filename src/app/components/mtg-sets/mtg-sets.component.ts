@@ -9,21 +9,45 @@ import { OswrenApiService } from 'src/app/services/oswren-api.service';
 export class MtgSetsComponent implements OnInit {
   public chosenSetCode: string = "";
   public numberOfCardsInSet: number;
-  @Input() setData: Array<Array<any>> = [];
+  public setData: Array<Array<any>> = [];
+  public setList: Array<any> = [];
+  public cardPage: number = 1;
 
   constructor(private oswrenApiService: OswrenApiService) { }
 
   ngOnInit(): void {
   }
 
-  getAllCardsForSet(): void {
-    this.oswrenApiService.getCardSet(this.chosenSetCode).subscribe((res: Array<any>) => {
+  populateAllSets(): void {
+    this.oswrenApiService.getAllSets().subscribe((res: Array<any>) => {
+      this.setList = res;
+    });
+  }
+
+  populateAllCardsForSet(set?: string): void {
+    if(set) {
+      this.chosenSetCode = set;
+    }
+
+    this.oswrenApiService.getCardsForSet(this.chosenSetCode).subscribe((res: Array<any>) => {
       this.setData = [];
       this.numberOfCardsInSet = res.length;
       while (res.length) {
-        this.setData.push(res.splice(0, 25));
+        this.setData.push(res.splice(0, 24));
       }
     });
+  }
+
+  pageRight(): void {
+    if(!(this.cardPage === this.setData.length)) {
+      this.cardPage++;
+    }
+  }
+
+  pageLeft(): void {
+    if(!(this.cardPage === 1)) {
+      this.cardPage--;
+    }
   }
 
   isValidSetCode(): boolean {
