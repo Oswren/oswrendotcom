@@ -27,7 +27,6 @@ export class MtgSetsComponent implements OnInit {
   }
 
   isValidSetCode(): boolean {
-    
     return !!this.chosenSetCode && this.chosenSetCode.length === 3;
   }
 }
