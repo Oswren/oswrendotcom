@@ -6,7 +6,7 @@ import { MtgSetsComponent } from './components/mtg-sets/mtg-sets.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/http-birds',
+    redirectTo: '/mtg-sets',
     pathMatch: 'full'
   },
   {
