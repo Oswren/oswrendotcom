@@ -1,5 +1,16 @@
 <mat-toolbar id="automation-toolbar" color="primary">
-  <span>Oswren</span>
+  <a routerLink="/http-birds">
+    <button class="nav-button" mat-flat-button color="accent">
+      Birbs
+    </button>
+  </a>
+
+  <a class="nav-button" routerLink="/mtg-sets">
+    <button mat-flat-button color="accent">
+      MTG Sets
+    </button>
+  </a>
+
   <span class="example-spacer"></span>
   <button mat-icon-button title="Copy a link to this page to share amongst friends!" (click)="copyLinkForCurrentPage()">
     <mat-icon>share</mat-icon>
