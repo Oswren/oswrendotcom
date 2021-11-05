@@ -20,7 +20,7 @@ export class MtgSetsComponent implements OnInit {
 
   populateAllSets(): void {
     this.oswrenApiService.getAllSets().subscribe((res: Array<any>) => {
-      this.setList = res;
+      this.setList = res.reverse();
     });
   }
 
