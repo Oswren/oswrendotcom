@@ -1,0 +1,37 @@
+.mtg-sets-search-card {    
+    background-color: #455A64;
+    margin: 3%;
+}
+
+.mtg-cards-card {    
+    background-color: #455A64;
+    margin: 3%;
+    margin-top: 0;
+}
+
+.container {
+    display: flex;
+}
+
+::ng-deep .images {
+    object-fit: scale-down;
+    width:100%;
+    height: auto;
+}
+
+::ng-deep .card-input {
+    color: white;
+}
+
+::ng-deep .input {
+    background-color: #455A64;
+}
+
+::ng-deep .cards {
+    background-color: #455A64;
+}
+
+::ng-deep .cards-found-area {
+    background-color: #455A64;
+    width: 20%R
+}

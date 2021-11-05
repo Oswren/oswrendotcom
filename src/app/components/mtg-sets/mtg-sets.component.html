@@ -1,1 +1,29 @@
-<p>mtg-sets works!</p>
+
+<mat-card class="mtg-sets-search-card">
+    <p>Search MTG Set for cards</p>
+    <div class="container">
+        <mat-card class="cards">
+            <mat-form-field appearance="fill">
+                <mat-label class="card-input">Magic Set</mat-label>
+                <input matInput [(ngModel)]="chosenSetCode"
+                (ngModelChange)="isValidSetCode()">
+            </mat-form-field>
+            <div class="cards-found-area">Cards Found: {{numberOfCardsInSet}}</div>
+            <br/>
+            <button mat-flat-button (click)="getAllCardsForSet()" 
+                class="link-button"
+                color="accent"
+                [disabled]="!isValidSetCode()">
+                <span>Get Card List!</span>
+            </button>
+        </mat-card>
+    </div>
+</mat-card>
+<mat-card class="mtg-cards-card" *ngIf="(setData.length > 0)">
+    <mat-grid-list cols="5" rowHeight="1:1.25" gutterSize="10px" class="card-grid">
+        <mat-grid-tile 
+            *ngFor="let card of setData[0]">
+            <img class="images" src="{{card.imageUrl}}" alt="{{card.text}}}" layout-fill>
+        </mat-grid-tile>
+    </mat-grid-list>    
+</mat-card>
