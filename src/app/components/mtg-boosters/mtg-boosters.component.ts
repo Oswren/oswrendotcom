@@ -27,6 +27,14 @@ export class MtgBoostersComponent implements OnInit {
     }
 
     this.oswrenApiService.getBoosterForSet(this.chosenSetCode).subscribe((res: Array<any>) => {
+      res.filter((card) => {
+        if(card.imageUrl.includes('http://')) {
+          card.imageUrl.replace('http://', 'https://');
+        }
+        
+        return card;
+      });
+
       this.boosterContents = res;
     });
   }

@@ -36,6 +36,15 @@ export class MtgSetsComponent implements OnInit {
     this.oswrenApiService.getCardsForSet(this.chosenSetCode).subscribe((res: Array<any>) => {
       this.setData = [];
       this.numberOfCardsInSet = res.length;
+
+      res.filter((card) => {
+        if(card.imageUrl.includes('http://')) {
+          card.imageUrl.replace('http://', 'https://');
+        }
+        
+        return card;
+      });
+
       while (res.length) {
         this.setData.push(res.splice(0, 24));
       }
