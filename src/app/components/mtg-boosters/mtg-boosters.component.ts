@@ -28,7 +28,6 @@ export class MtgBoostersComponent implements OnInit {
 
     this.oswrenApiService.getBoosterForSet(this.chosenSetCode).subscribe((res: Array<any>) => {
       this.boosterContents = res;
-      console.log(res)
     });
   }
 
