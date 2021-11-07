@@ -1,0 +1,68 @@
+.mtg-sets-search-card {    
+    background-color: #455A64;
+    margin: 20px;
+    width: fit-content;
+}
+
+.mtg-cards-card {    
+    background-color: #455A64;
+    margin: 20px;
+    margin-top: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.tabber {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.paging-text {
+    text-align: center;
+}
+
+.set-list {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    overflow-y: scroll;
+    background: lightgray;
+    box-shadow: inset 0 0 4px #707070;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+::ng-deep .search-button {
+    margin-left: 10px;
+    margin-bottom: 20px!important;
+}
+
+::ng-deep .images {
+    object-fit: scale-down;
+    width:100%;
+    height: auto;
+}
+
+::ng-deep .card-input {
+    color: white;
+}
+
+::ng-deep .input {
+    background-color: #455A64;
+}
+
+::ng-deep .cards {
+    background-color: #455A64;
+}
+
+::ng-deep .cards-found-area {
+    background-color: #455A64;
+}

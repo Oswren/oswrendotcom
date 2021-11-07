@@ -1,0 +1,54 @@
+<div class="container">
+    <mat-card class="mtg-sets-search-card">
+        <p>Search MTG Set to Create a Booster!</p>
+        <div class="container">
+            <mat-card class="cards">
+                <button mat-flat-button (click)="populateAllSets()" 
+                    class="link-button"
+                    color="accent">
+                    <span>View Set List</span>
+                </button>
+                <br/>
+                <br/>
+                <mat-form-field appearance="fill">
+                    <mat-label class="card-input">Magic Set</mat-label>
+                    <input matInput [(ngModel)]="chosenSetCode"
+                    (ngModelChange)="isValidSetCode()">
+                </mat-form-field>
+                <button mat-flat-button (click)="fetchBoosterForSet('')" 
+                    class="search-button"
+                    color="accent"
+                    [disabled]="!isValidSetCode()">
+                    <mat-icon>search</mat-icon>
+                </button>
+            </mat-card>
+        </div>
+    </mat-card>
+
+    <mat-card class="mtg-sets-search-card set-list" *ngIf="setList.length > 0">
+        <mat-list>
+            <mat-list-item *ngFor="let set of setList">
+                <button 
+                    mat-flat-button 
+                    color="accent"
+                    (click)="fetchBoosterForSet(set.code)">
+                        {{set.name}}
+                </button>
+            </mat-list-item>
+        </mat-list>
+    </mat-card>
+
+</div>
+<mat-card class="mtg-cards-card" *ngIf="(boosterContents.length > 0)">
+    <mat-grid-list cols="5" rowHeight="1:1.25" gutterSize="10px" class="card-grid">
+        <mat-grid-tile 
+            *ngFor="let card of boosterContents">
+            <div class="display: flex">
+                <img class="images" src="{{card.imageUrl}}" alt="{{card.text}}}" layout-fill>
+                <mat-grid-tile-footer *ngIf="card.foil === true">
+                    <span class="display: flex">FOIL</span>
+                </mat-grid-tile-footer>            
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</mat-card>

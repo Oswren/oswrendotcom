@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { InputValidationService } from 'src/app/services/input-validation.service';
 import { OswrenApiService } from 'src/app/services/oswren-api.service';
 
 @Component({
@@ -13,7 +14,10 @@ export class MtgSetsComponent implements OnInit {
   public setList: Array<any> = [];
   public cardPage: number = 1;
 
-  constructor(private oswrenApiService: OswrenApiService) { }
+  constructor(
+    private oswrenApiService: OswrenApiService,
+    private inputValidationService: InputValidationService
+    ) { }
 
   ngOnInit(): void {
   }
@@ -51,6 +55,6 @@ export class MtgSetsComponent implements OnInit {
   }
 
   isValidSetCode(): boolean {
-    return !!this.chosenSetCode && this.chosenSetCode.length === 3;
+    return this.inputValidationService.isSetCodeValid(this.chosenSetCode);
   }
 }

@@ -10,6 +10,7 @@ import { HttpBirdsComponent } from './components/http-birds/http-birds.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LinkCopyService } from './services/link-copy.service';
 import { MtgSetsComponent } from './components/mtg-sets/mtg-sets.component';
+import { MtgBoostersComponent } from './components/mtg-boosters/mtg-boosters.component';
 // material imports
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -19,16 +20,17 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HttpBirdsComponent,
-    MtgSetsComponent
+    MtgSetsComponent,
+    MtgBoostersComponent
   ],
   imports: [
     FormsModule,
